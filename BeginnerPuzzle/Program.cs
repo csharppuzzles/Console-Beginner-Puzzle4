@@ -38,13 +38,33 @@ static void ExampleA()
 //  "That's what I thought. I sent 7 down, but my basement is STILL dark."
 // You will need to learn about "greater than" and "less than" symbols.
 // Learn about "else if"
-/*
 static void PuzzleA()
 {
     Console.WriteLine("\nPuzzle A");
     Console.WriteLine("~~~~~~~~~");
+
+    int answer = 7;
+
+    Console.WriteLine("How many dead hookers does it take to change a lightbulb?: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+
+    if (number == answer)
+    {
+        Console.WriteLine($"That's what I thought. I sent {answer} down, but my basement is STILL dark.");
+    }
+    else if( number > answer)
+    {
+        Console.WriteLine($"Yeah, got to be more than {answer}, because my basement is STILL dark.");
+    }
+    else if (number < answer)
+    {
+        Console.WriteLine($"Well, I know it's more than {answer}, because my basement is STILL dark.");
+    }
+    else
+    {
+        Console.WriteLine($"Wow. Unexpected input!");
+    }
 }
-*/
 
 
 static void ExampleB()
@@ -115,13 +135,81 @@ static void ExampleB()
 // Then print their order confirmation
 // If they enter a wrong choice tell them "Tony Soprano owns this place, so you better order something"
 // If they do not choose any of the options give them an error message
-/*
+
 static void PuzzleB()
 {
     Console.WriteLine("\nPuzzle B");
     Console.WriteLine("~~~~~~~~~");
+
+    Console.WriteLine("Welcome to North Jersey Pizzeria. What would you like?");
+    Console.WriteLine("1: Pizza");
+    Console.WriteLine("2: Calzone");
+    Console.WriteLine("3: Lasagne");
+    Console.WriteLine("Please enter the number of your selection: ");
+
+    int choice = Convert.ToInt32(Console.ReadLine());
+
+    if (choice == 1)
+    {
+        Console.WriteLine("\nWould you like a Regular or Large? Enter \"r\" or \"l\":");
+        string? mealSize = Console.ReadLine();
+
+        if (mealSize == "r")
+        {
+            Console.WriteLine("One regular pizza, coming up!");
+        }
+        else if (mealSize == "l")
+        {
+            Console.WriteLine("One large pizza, coming up!");
+        }
+        else
+        {
+            Console.WriteLine("Tony Soprano owns this place, so you better order something");
+        }
+
+    }
+    else if (choice == 2)
+    {
+        Console.WriteLine("\nWould you like a Regular or Large? Enter \"r\" or \"l\":");
+        string? mealSize = Console.ReadLine();
+
+        if (mealSize == "r")
+        {
+            Console.WriteLine("One regular calzone, coming up!");
+        }
+        else if (mealSize == "l")
+        {
+            Console.WriteLine("One large calzone, coming up!");
+        }
+        else
+        {
+            Console.WriteLine("Tony Soprano owns this place, so you better order something");
+        }
+    }
+    else if (choice == 3)
+    {
+        Console.WriteLine("\nWould you like a Regular or Large? Enter \"r\" or \"l\":");
+        string? mealSize = Console.ReadLine();
+
+        if (mealSize == "r")
+        {
+            Console.WriteLine("One regular lasagne, coming up!");
+        }
+        else if (mealSize == "l")
+        {
+            Console.WriteLine("One large lasagne, coming up!");
+        }
+        else
+        {
+            Console.WriteLine("Tony Soprano owns this place, so you better order something");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Just choose 1,2 or 3!");
+    }
 }
-*/
+
 
 static void ExampleC()
 {
@@ -172,13 +260,49 @@ static void ExampleC()
 
 // I'd expect the program to break if they enter a float like 1.52 or a string, that's ok for now.
 // But it should not break if they just enter blank or hit return
-/*
+
 static void PuzzleC()
 {
     Console.WriteLine("\nPuzzle C");
     Console.WriteLine("~~~~~~~~~");
+
+    Random random = new Random();
+    int number = random.Next(1, 10);
+
+    Console.WriteLine("What number am I thinking of? It's between 1 and 10: ");
+    string? input = Console.ReadLine();
+
+    int guess = 0;
+
+    if (input != "" && input != null)               // You could choose string.Empty instead of ""
+    {
+        guess = Convert.ToInt32(input);
+
+        if (guess >= 1 && guess <= 10)
+        {
+            if (guess == number)
+            {
+                Console.WriteLine("Bingo! Correct guess!");
+            }
+            else if (guess == number + 1 || guess == number - 1)
+            {
+                Console.WriteLine($"Close! Out by one! Number was {number}");
+            }
+            else
+            {
+                Console.WriteLine($"Wrong! It was {number}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Error. You have to enter a number between 1 and 10");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Error. You can't just enter blank space");
+    }
 }
-*/
 
 
 
