@@ -2,6 +2,9 @@
 ### Lets do some console app puzzles. Most beginners start off writing console apps, so it is a good way to make sure we cover the basics.
 
 ### View the YouTube Video: 
+[https://youtu.be/a26jYrbG2Bk](https://youtu.be/a26jYrbG2Bk)
+
+Our Website: [https://www.csharppuzzles.com/](https://www.csharppuzzles.com/)
 
 
 ## Puzzles
